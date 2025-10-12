@@ -101,6 +101,20 @@ class LinkedList {
         this.size--;
     }
 
+    //search a element from the list
+    search(value){
+        let current = this.head;
+        let index = 0;
+        
+        while(current){
+            if(current.value === value){
+                return console.log(`${current.value} found at index ${index}`)
+            }
+            current = current.next;
+            index++;
+        }
+    }
+
     //for priting the list
     printList() {
         let current = this.head;
@@ -121,4 +135,5 @@ list.append(40);
 list.insertAt(30, 3);
 list.remove(0);
 list.removeAt(3);
+list.search(30);
 list.printList();

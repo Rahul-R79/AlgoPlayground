@@ -13,6 +13,7 @@ class LinkedList {
         this.size = 0;
     }
     
+    //add a node to the first
     prepand(value){
         const newNode = new Node(value);
         newNode.next = this.head;
@@ -20,7 +21,7 @@ class LinkedList {
         this.size++;
     }
 
-    //add a value to the last
+    //add a node to the last
     append(value){
         const newNode = new Node(value);
         if(!this.head){
@@ -35,7 +36,7 @@ class LinkedList {
         this.size++;
     }
     
-    //insert a value to any specific index
+    //insert a node to any specific index
     insertAt(value, index){
         if(index<0 || index>this.size){
             return console.log('invalid index');
@@ -58,6 +59,24 @@ class LinkedList {
             previous.next = newNode;
         }
     }
+
+    //delete a node from the list
+    remove(value){
+        if(this.head.value === value){
+            this.head = this.head.next;
+            this.size--;
+        }
+        
+        let current = this.head;
+        while(current.next && current.next.value !== value){
+            current = current.next;
+        }
+        
+        if(current.next){
+            current.next = current.next.next;
+            this.size--;
+        }
+    }
     
     //for priting the list
     printList(){
@@ -77,5 +96,6 @@ list.append(10);
 list.append(20);
 list.append(40);
 list.insertAt(30, 3);
+list.remove(0);
 list.printList();
 

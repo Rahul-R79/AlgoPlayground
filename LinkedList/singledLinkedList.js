@@ -115,6 +115,11 @@ class LinkedList {
         }
     }
 
+    //get the length of the node
+    getNodeSize(){
+        console.log('size of the node is ' + this.size);
+    }
+
     //for priting the list
     printList() {
         let current = this.head;
@@ -136,4 +141,5 @@ list.insertAt(30, 3);
 list.remove(0);
 list.removeAt(3);
 list.search(30);
+list.getNodeSize();
 list.printList();

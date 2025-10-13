@@ -1,7 +1,5 @@
 1. LinkedList
 
-a. Singled LinkedList
-
 ## Beginner Level (Implementation & Basics)
 These help you understand how Linked Lists work.
 
@@ -29,5 +27,3 @@ These test your understanding of traversal and logic.
 * Check if a linked list is a palindrome.
 * Delete the middle node of a linked list.
 * Find the intersection point of two linked lists.
-
-b. doubled LinkedList

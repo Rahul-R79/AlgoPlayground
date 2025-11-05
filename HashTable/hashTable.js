@@ -82,16 +82,3 @@ ht.set('blueberry', 900);
 console.log(ht.get('lemon'));
 ht.remove('blueberry');
 ht.display();
-
-//Count Character Frequency;
-function charCount(str){
-    let count = {};
-    
-    for(let ch of str){
-        if(count[ch] = (count[ch] || 0) + 1);
-    }
-    
-    return count;
-}
-
-console.log(charCount('hello'));
